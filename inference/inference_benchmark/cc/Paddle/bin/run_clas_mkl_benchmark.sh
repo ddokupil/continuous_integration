@@ -16,7 +16,7 @@ test_cpu(){
     printf "${YELLOW} ${model_name} input image_shape = ${image_shape} ${NC} \n";
     use_gpu=false;
 
-    for batch_size in "1" "2" "4"
+    for batch_size in "1" # "2" "4"
     do
         echo " "
         printf "start ${YELLOW} ${model_name}, use_gpu: ${use_gpu}, batch_size: ${batch_size}${NC}\n"
@@ -51,9 +51,9 @@ test_mkldnn(){
     use_gpu=false;
     use_mkldnn=true;
 
-    for batch_size in "1" "2" "4"
+    for batch_size in "1" # "2" "4"
     do
-        for cpu_math_library_num_threads in "1" "2" "4"
+        for cpu_math_library_num_threads in "1" # "2" "4"
         do
             echo " "
             printf "start ${YELLOW} ${model_name}, use_mkldnn: ${use_mkldnn}, cpu_math_library_num_threads: ${cpu_math_library_num_threads}, batch_size: ${batch_size}${NC}\n"
