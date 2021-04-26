@@ -24,11 +24,11 @@ predict_cpu(){
     model_type="static"
     log_root="./logs/${model_name}_cpu"
 
-    for batch_size in "1" "2" "4"
+    for batch_size in "1" # "2" "4"
     do
-        for use_mkldnn in "true" "false"
+        for use_mkldnn in "true" # "false"
         do
-            for cpu_math_library_num_threads in "1" "2" "4"
+            for cpu_math_library_num_threads in "1" # "2" "4"
             do
                 echo " "
                 printf "start ${RED} ${model_name}, use_mkldnn: ${use_mkldnn}, \
